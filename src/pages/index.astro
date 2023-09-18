@@ -1,5 +1,6 @@
 ---
-
+import Navbar from "../components/Navbar.astro";
+import '../style.css'
 ---
 
 <html lang="en">
@@ -8,9 +9,26 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Indian Opensource Community</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="lg:h-screen flex flex-col overflow-x-hidden">
+			<Navbar />
+			<div class="bg-cover bg-center flex-grow w-full flex flex-col md:flex-row md:items-center p-6 gap-8 relative" style="background-image: url('home.jpg');">
+				<p class="text-white font-semibold hidden lg:block absolute bottom-4 w-full text-center">Scroll Below</p>
+				<div class="md:w-1/2">
+					<h1 class="text-white lg:p-12 text-4xl lg:text-6xl max-w-[300px] lg:max-w-none font-bold">
+						Creator's of 21st Century
+					</h1>
+				</div>
+				<div class="p-1 rounded flex flex-col gap-8 md:w-1/2">
+					<p class="text-white font-semibold max-w-[350px] lg:max-w-none">We are a community of developers who love to build amazing products, for everyone, without a price</p>
+					<div class="flex gap-2">
+						<button class="bg-white px-4 py-2 hover:bg-black hover:text-white hover:underline transition-all transition-[0.25s]">Explore Projects</button>
+						<button class="text-white px-6 py-2 bg-black underline hover:bg-white hover:text-black hover:no-underline transition-all transition-[0.25s]">Join Us</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
